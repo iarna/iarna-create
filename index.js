@@ -69,6 +69,7 @@ module.exports = (pkg, template, defaults) => {
     writeFile(`${pkg}/LICENSE`, data)
     console.error('~:', 'created LICENSE')
   }
+
   if (!exists(`${pkg}/PULL_REQUEST_TEMPLATE`)) {
     writeFile(`${pkg}/PULL_REQUEST_TEMPLATE`, readFile(`${template}/PULL_REQUEST_TEMPLATE`))
     console.error('~:', 'created PULL_REQUEST_TEMPLATE')
@@ -76,6 +77,10 @@ module.exports = (pkg, template, defaults) => {
   if (!exists(`${pkg}/.gitignore`)) {
     writeFile(`${pkg}/.gitignore`, readFile(`${template}/gitignore`))
     console.error('~:', 'created .gitignore')
+  }
+  if (!exists(`${pkg}/.npmrc`) && exists(`${template}/npmrc`)) {
+    writeFile(`${pkg}/.npmrc`, readFile(`${template}/npmrc`))
+    console.error('~:', 'created .npmrc')
   }
 
   if (tjson.scripts) {
