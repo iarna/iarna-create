@@ -1,4 +1,5 @@
 'use strict'
+/* eslint-disable no-console,no-empty */
 const fs = require('fs')
 const qr = require('@perl/qr')
 const qx = require('@perl/qx').sync
