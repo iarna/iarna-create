@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/iarna/iarna-create/compare/v1.1.2...v2.0.0) (2019-01-01)
+
+
+### Features
+
+* **npmrc:** Add support for npmrc template ([30fef86](https://github.com/iarna/iarna-create/commit/30fef86))
+* **standard:** Switch template from standard to [@iarna](https://github.com/iarna)/standard ([fb1f659](https://github.com/iarna/iarna-create/commit/fb1f659))
+
+
+### BREAKING CHANGES
+
+* **standard:** This is breaking due to dependents needing to declare their
+own package.json template if they don't want @iarna/standard
+
+
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/iarna/iarna-create/compare/v1.1.1...v1.1.2) (2018-06-22)
 
